@@ -1,33 +1,137 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    
+  <head> 
    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
+
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <%= csrf_meta_tags %>
   </head>
   <body>
 
+     <!--nav panel -->
+<nav class ="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+  <!-- brand/toggle for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Brett Thomas</a>
+  </div>
 
+  <div class="collapse navbar-collapse" id="navbar-collapse-main">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#information">Information</a></li>
+      <li><a href="#google_map">Contact</a></li>
+      <li><a href="http://www.github.com/bartdangus">Brett's github</a></li>
+    </ul>
+  </div><!--navbar-collapse -->
+</div><!--container-fluid -->
+</nav>
 
-     <div class="container-fluid">
-       <ul>
-        <nav class="navbar navbar-default" role="navigation">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Brett Thomas</a>   
+<!-- home section -->
+<div id="home" class="home">
+  <div class="text-vcenter">
+    <h1> Hello World</h1>
+    <h3> Here's a place for you to land </h3>
+    <a href="#about" class="btn-btn-default btn-lg">Continue</a>
+  </div>
+</div>
 
+<!-- about section/background -->
+<div id="about" class="pad-section">
+  <div class="container">    
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="https://lhueagleeye.files.wordpress.com/2014/10/fanpop-com.jpg" alt="" />
+      </div>
+      <div class ="col-sm-6 text-center">
+        <h2> blah blah blah blah blah blah </h2>
+        <p class="lead"> Check it out its the moon</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--services section/glyphicons here -->
+<div id="services" class="pad-section">
+  <div class="container">
+    <h2 class="text-center">Services</h2> <hr /> <!--note-->
+    <div class="row text-center">
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-cloud"> </i>
+        <h4> Service 1 </h4>
+        <p> Shooting clouds out of the sky</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-refresh"> </i>
+        <h4> Service 2 </h4>
+        <p> The circle of life with a smile</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-eye-close"> </i>
+        <h4> Service 3 </h4>
+        <p> Having a badass scar over your eye like a bad guy in all the movies </p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-phone-alt"> </i>
+        <h4> service 4 </h4>
+        <p> Prank phone calling grandpa on his land line </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- info section -->
+<div id="information" class-"pad-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title"> Extra info </h2>
           </div>
-      <div>
-
-        <form class="navbar-form navbar-right" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search and Destroy">
+          <div class="panel-body lead">
+            irofnianfofmoaj fpdsjgo fsjgisdhfguoghfdio gf dgifhago ifadg faoghiadf gha ghpi a
+            hsuodfhdso gihosaghuos agduhisdahgfui sdahgi asug usd gfouasdhfoisdah giosda gh d
           </div>
-          <button type="submit" class="btn btn default"> Submit </button>
-       </ul>   
-      <%= yield %>
-     </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<div id="services" class="pad section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h3> Where the hell am I? </h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- map -->
+<div id="google_map"></div>
+
+<!-- real footer -->
+<footer>
+  <hr />
+  <div class="container">
+    <p class="text-right"> Brett Thomas 2015 </p>
+  </div>
+</footer>
+
+
 
   </body>
 </html>
